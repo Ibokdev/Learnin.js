@@ -87,5 +87,53 @@ if (name === "vitae" && isAtool) {
   } else {
     console.log("FAILED")
   }
-  //There are 4 loops, which are
-  //for . foreach. while. map. dowhile.
+ 
+  //ternary operators are short logic operations
+  const isvite = name === "vite" ? true : false
+  console.log("isvite", isvite)
+
+//There are 4 loops, which are
+  //for . foreach. while. map. dowhile. filter .find
+ //FOR
+//first part is to define the variable, 
+//second part check a certain condition
+//third perform action on the previous variable
+const age = 27
+for (let patience = 22; patience <= age; patience ++){
+  console.log("patience", patience)
+}
+
+const bag = ["rice", "spaghetti", "noodles", "beans"]
+//second way of defining an array
+const newArray = new Array ("rice", "spaghetti", "noodles", "beans")
+
+for (let list in bag){
+  console.log(bag [list])
+}
+
+//FOR EACH
+//foreach loop is a JS array loop that accept a function and passes the result of each 
+//loop to the function as parameter
+newArray.forEach(function (item){
+  console.log("foreach item", item)
+})
+
+//WHILE
+let range = 30;
+while (range > age) {
+  range--
+  console.log(range)
+}
+
+//DO WHILE
+//dO while loop performs an action first before checking the conditiions
+
+const istvplugged = false;
+do {
+  console.log("move tv")
+} while (istvplugged);
+
+
+//functions
+//callbacks
+//callback hell
