@@ -65,7 +65,7 @@ console.log(arrayexample[6])
 //CONDITIONS USING "IF ELSE"
 let name = "hycient"
 if (name === "hycient"){
-  alert("SUCCESSFUL")
+  // alert("SUCCESSFUL")
   console.log("YES")
 }else {
   alert("UNSUCCESSFUL")
@@ -137,3 +137,111 @@ do {
 //functions
 //callbacks
 //callback hell
+
+//FUNCTION is a reusable piece of code that is defined by using the key word function
+//It may or maynot have any argument.
+//ARGUMENT is a piece(s) of data that is passed to a function.There are sveral ways of defining a function.
+
+//1.function without argument
+function Name (){
+  alert("yeeeeeeeeeh!")
+}
+
+// Name()
+
+//2.function withargument
+function functionwithArgument(message, issue) {
+  const eleme = document. getElementById("app");
+  console.log(eleme)
+  eleme.innerHTML = `<h1>${message}</h1>`
+  eleme.innerHTML += `<h1>${issue}</h1>`
+}
+
+//function invocation
+functionwithArgument("patience is beautiful", "too beautiful")
+
+//functionwithArgument("hycient is here", "")
+
+//ARROW FUCTION , ANONYMOUS FUCTION 
+//There is a slight differnce but close similarities due to the fact taht that both dont have names.
+//ANONYMOUS FUNCTION:
+const annoymous = function(x,y,){
+return (x * y);
+}
+
+console.log (annoymous(23,78))
+
+const mous = function(x,y,operation){
+  if (operation === "add"){
+    return x +y;
+  } else if (operation === "minus"){
+  return (x - y);
+  } else if (operation === "mul"){
+    return x * y 
+  } else {
+    return {x , y}
+  }
+  }
+  
+  console.log (mous(23,78, "minus"))
+
+
+  //ARROW FUNCTION
+
+  const arrowfunction = (x,y,operation) => {
+    if (operation === "add"){
+      return x +y;
+    } else if (operation === "minus"){
+    return (x - y);
+    } else if (operation === "mul"){
+      return x * y 
+    } else {
+      return {x , y}
+    }
+  }
+
+  console.log (arrowfunction(2, 3 , ""));
+
+  //Variable scope
+
+  const assignment = () => {
+  student.subject.forEach((subject) => {
+    console.log(subject)
+  })
+  }
+  
+  assignment()
+
+  //CALLBACK FUNCTION are funstions passed into another functions as an argument
+
+  const callbackExample = (firstname,surname, callback ) => {
+  callback(surname)
+  }
+  callbackExample("hycient","ibok", (name) => {console.log(name)})
+
+  const callbackadd = (x , y, callback) => {
+    callback( x , y)
+  }
+  callbackadd(3 , 2, (z,r) => {console.log(z+r)})
+
+
+  //DOM MANIPULATION.Document Object Model.
+
+  const app = document.getElementById("app")
+
+app.style.color = "green"
+app.style.fontSize = "0.3em"
+
+
+const input1 = document.getElementById("inputemail");
+
+input1.addEventListener("keyup", () => {
+  console.log (input1.value)
+  if (input1.value.length < 9) {
+    input1.style.borderWidth = 2
+    input1.style.borderColor = "red"
+  } else {
+    input1.style.borderWidth = 2
+    input1.style.borderColor = "green"
+  }
+})
