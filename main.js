@@ -245,3 +245,78 @@ input1.addEventListener("keyup", () => {
     input1.style.borderColor = "green"
   }
 })
+
+for (let i=2; i < 24; i++){
+  //not nessecary but for adding texts, string or concatinating values 
+  console.log (`${i}`)
+}
+
+//using FOR LOOP to iteratr over an ARRAY **include let
+const baggies = ["fan", "table", "chair", "centertable"]
+for( let items in baggies){
+  console.log (baggies[items])
+}
+
+
+// do {
+//   console.log ("hello bae")
+// } while (1 < 0);
+
+let num = 10;
+while (num > 1) {
+ console.log (num) 
+ num--
+}
+
+const lengthinbaggies = baggies.length
+let iterator = 0
+while (lengthinbaggies > iterator) {
+  console.log (baggies[iterator])
+  iterator ++
+}
+
+//functions
+ //normalfunction
+function outputnames (params) {
+  
+}
+//arrowfunction
+const arrowoutputname = () => {
+
+}
+
+//annoynmousfunction
+const namelessoutput = function () {
+
+}
+
+const recievescallback = (callbackExample2) =>{
+  callbackExample2("name")
+}
+const therecievedfunction = (name) =>{
+  console.log(name)
+}
+recievescallback(therecievedfunction)
+recievescallback ((name) => {console.log (name)})
+//MAP
+const baggi = ["fan", "table", "chair", "centertable"]
+
+baggi.map(function (val,index) {
+console.log(`value ${val} and index ${index}`)
+})
+
+//FILTER
+const bagg = ["fan", "table", "chair", "centertable"]
+const filtered = baggi.filter((val,index) => {
+return val=== "fan"
+})
+console.log(filtered)
+
+//ASSIGNMENT
+// = means assign
+// == checks same but not data type
+// === check if its samr and data type
+// != if its not equal to the value
+// !== if its not equal to the value or data type
+// > greater than
+// < less than
